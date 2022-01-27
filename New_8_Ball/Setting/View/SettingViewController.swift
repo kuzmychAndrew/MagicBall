@@ -20,9 +20,16 @@ class SettingViewController: UIViewController{
     
 // Метод для виклику після натискання кнопки, отримання даних з TextField та передачі даниз в ViewModel
     @objc func save(sender: UIButton){
-        guard let currentAnswer = answerField.text else{return}
-        svm.writeHardAnswer(answer: currentAnswer)
-        answerField.text = ""
+        if answerField.text == ""{
+            let ac = UIAlertController(title: "Error", message: "The field cannot be empty", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+            self.present(ac, animated: true, completion: nil)
+        
+        }else{
+            guard let currentAnswer = answerField.text else{return}
+            svm.writeHardAnswer(answer: currentAnswer)
+            answerField.text = ""
+        }
 
        
     }
