@@ -13,9 +13,10 @@ class ViewController: UIViewController {
     var image:UIImageView!
     var label:UILabel!
     var labelUnderField: UILabel!
-    var hardAnswerLabel: UILabel!
+    var labelUnderField2: UILabel!
     var textField: UITextField!
     var getAnswer: UIButton!
+    
     
         // Ініціалізуємо зовніщні сервіси
     private var mainViewModel = MainViewModel()
@@ -92,36 +93,41 @@ class ViewController: UIViewController {
         label.layer.cornerRadius = 3
         label.text = "Shake to take your answer"
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 24)
+        label.font = UIFont.systemFont(ofSize: 20)
         label.textColor = .white
         view.addSubview(label)
         
         textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.textAlignment = .center
-        textField.text = "Your question"
-        textField.layer.cornerRadius = 5
         textField.backgroundColor = .lightGray
         textField.textColor = .white
-        textField.font = UIFont.systemFont(ofSize: 24)
+        textField.font = UIFont.systemFont(ofSize: 20)
         view.addSubview(textField)
         
         labelUnderField = UILabel()
         labelUnderField.translatesAutoresizingMaskIntoConstraints = false
         labelUnderField.textAlignment = .left
-        labelUnderField.layer.cornerRadius = 3
         labelUnderField.text = "If you do not receive an answer after shaking, press the button twice"
         labelUnderField.numberOfLines = 0
-        labelUnderField.font = UIFont.systemFont(ofSize: 18)
+        labelUnderField.font = UIFont.systemFont(ofSize:16)
         view.addSubview(labelUnderField)
         
+        labelUnderField2 = UILabel()
+        labelUnderField2.translatesAutoresizingMaskIntoConstraints = false
+        labelUnderField2.textAlignment = .left
+        labelUnderField2.text = "Enter your question"
+        labelUnderField2.textColor = UIColor.lightGray
+        labelUnderField2.numberOfLines = 0
+        labelUnderField2.font = UIFont.systemFont(ofSize:16)
+        view.addSubview(labelUnderField2)
         
        getAnswer = UIButton()
         getAnswer.translatesAutoresizingMaskIntoConstraints = false
        
         getAnswer.setTitle("Get Answer", for: .normal)
         getAnswer.layer.cornerRadius = 5
-        getAnswer.backgroundColor = UIColor.lightGray
+        getAnswer.backgroundColor = .systemBlue
         getAnswer.addTarget(self, action: #selector(answer), for: .touchUpInside)
         view.addSubview(getAnswer)
         
@@ -132,14 +138,19 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate([
         
             image.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 20),
-            image.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20),
-            image.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +20),
+            image.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -45),
+            image.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +45),
             
             labelUnderField.topAnchor.constraint(equalTo: image.bottomAnchor, constant: +100),
             labelUnderField.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20),
             labelUnderField.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +20),
             
-            textField.topAnchor.constraint(equalTo: labelUnderField.bottomAnchor, constant: 20),
+            labelUnderField2.topAnchor.constraint(equalTo: labelUnderField.bottomAnchor, constant: +20),
+            labelUnderField2.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20),
+            labelUnderField2.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +20),
+
+            
+            textField.topAnchor.constraint(equalTo: labelUnderField2.bottomAnchor, constant: 5),
             textField.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20),
             textField.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +20),
             
@@ -148,8 +159,8 @@ class ViewController: UIViewController {
             label.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +20),
              
             getAnswer.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 20),
-            getAnswer.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20),
-            getAnswer.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +20)
+            getAnswer.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -80),
+            getAnswer.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +80)
         ])
         
     }
