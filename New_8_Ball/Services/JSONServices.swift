@@ -11,22 +11,27 @@ class JSONService{
     // Метод для отримання даних з веб ресурсу
     func getAnswer(completion : @escaping (Answers) ->()){
         let url = URL(string: "https://8ball.delegator.com/magic/JSON/why")!
+        let queue = DispatchQueue.global(qos: .utility)
+        queue.async {
+            
         
-        AF.request(url, method: .get, encoding: URLEncoding.default).responseData {responseData in
-            print(responseData)
-            switch responseData.result{
-            case .success(let data):
-                let jsonDecoder = JSONDecoder()
-                let empData = try! jsonDecoder.decode(Answers.self, from: data)
+        
+            AF.request(url, method: .get, encoding: URLEncoding.default).responseData {responseData in
+                print(responseData)
+                switch responseData.result{
+                case .success(let data):
+                    let jsonDecoder = JSONDecoder()
+                    let empData = try! jsonDecoder.decode(Answers.self, from: data)
                     completion(empData)
                     dump(empData)
                     print(empData)
 //
                 
-            case .failure(let error):
+                case .failure(let error):
                 print(error)
 //
 //
+                }
             }
         }
     }
