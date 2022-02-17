@@ -15,6 +15,6 @@ class SettingViewModel{
         //Отримання даних з View та передача даних в зовнішній ресурс
     
     func writeHardAnswer(answer: String){
-        realmService.writeHardAnswer(answer: answer)
+        realmService.writingRealmAnswer(answer: answer)
     }
 }

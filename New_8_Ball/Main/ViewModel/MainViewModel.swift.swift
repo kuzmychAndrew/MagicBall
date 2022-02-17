@@ -20,17 +20,17 @@ class MainViewModel{
     
     
     // Отримуємо необхідні дані з зовнішніх сервісів
-    func fetchHardAnwer(){
+    final func fetchHardAnwer(){
         print("fetchHardAnwer")
-        self.realmService.getHardAnswer {(answer) in
+        self.realmService.getingRealmAnswer {(answer) in
             self.realmAnswer.value = answer
             print("mainViewModel - \(answer)")
         }
     }
     
     
-    func fetchAnswer(){
-        self.jsonService.getAnswer {(empData) in
+    final func fetchAnswer(){
+        self.jsonService.getingJSONAnswer {(empData) in
             self.empData = empData
             self.jsonAnswer.value = empData.magic.answer
         }

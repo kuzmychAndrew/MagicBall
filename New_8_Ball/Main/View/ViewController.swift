@@ -110,7 +110,7 @@ class ViewController: UIViewController {
         labelUnderField.textAlignment = .left
         labelUnderField.text = "If you do not receive an answer after shaking, press the button twice"
         labelUnderField.numberOfLines = 0
-        labelUnderField.font = UIFont.systemFont(ofSize:16)
+        labelUnderField.font = UIFont(name: "HelveticaNeue-Bold", size: 12)
         view.addSubview(labelUnderField)
         
         labelUnderField2 = UILabel()
@@ -141,26 +141,32 @@ class ViewController: UIViewController {
             image.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -45),
             image.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +45),
             
-            labelUnderField.topAnchor.constraint(equalTo: image.bottomAnchor, constant: +100),
-            labelUnderField.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20),
-            labelUnderField.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +20),
+           
             
-            labelUnderField2.topAnchor.constraint(equalTo: labelUnderField.bottomAnchor, constant: +20),
+            labelUnderField2.topAnchor.constraint(equalTo: image.bottomAnchor, constant: +60),
             labelUnderField2.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20),
             labelUnderField2.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +20),
 
             
-            textField.topAnchor.constraint(equalTo: labelUnderField2.bottomAnchor, constant: 5),
+            textField.topAnchor.constraint(equalTo: labelUnderField2.bottomAnchor, constant: 10),
             textField.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20),
             textField.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +20),
+            
+           
             
             label.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: +20),
             label.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20),
             label.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +20),
+            
+            labelUnderField.topAnchor.constraint(equalTo: label.bottomAnchor, constant: +5),
+            labelUnderField.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20),
+            labelUnderField.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +20),
              
-            getAnswer.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 20),
+            getAnswer.topAnchor.constraint(equalTo: labelUnderField.bottomAnchor, constant: 60),
             getAnswer.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -80),
-            getAnswer.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +80)
+            getAnswer.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +80),
+            
+            
         ])
         
     }
