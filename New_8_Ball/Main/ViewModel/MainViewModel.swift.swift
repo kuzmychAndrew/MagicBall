@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class MainViewModel{
+final class MainViewModel{
     
     //Ініціалізуємо зовнішні сервіси
 
@@ -20,7 +20,7 @@ class MainViewModel{
     
     
     // Отримуємо необхідні дані з зовнішніх сервісів
-    final func fetchHardAnwer(){
+    func fetchHardAnwer(){
         print("fetchHardAnwer")
         self.realmService.getingRealmAnswer {(answer) in
             self.realmAnswer.value = answer
@@ -29,7 +29,7 @@ class MainViewModel{
     }
     
     
-    final func fetchAnswer(){
+    func fetchAnswer(){
         self.jsonService.getingJSONAnswer {(empData) in
             self.empData = empData
             self.jsonAnswer.value = empData.magic.answer

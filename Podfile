@@ -6,8 +6,8 @@ target 'New_8_Ball' do
   use_frameworks!
 
   # Pods for New_8_Ball
-pod 'Alamofire'
-pod 'RealmSwift'
+pod 'Alamofire', '~> 5.5'
+pod 'RealmSwift', '~>10'
   target 'New_8_BallTests' do
     inherit! :search_paths
     # Pods for testing

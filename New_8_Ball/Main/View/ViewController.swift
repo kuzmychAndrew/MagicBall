@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     
     var image:UIImageView!
@@ -137,34 +137,34 @@ class ViewController: UIViewController {
     // Задання розміщення елементів та задання мінімальних обмежень
         NSLayoutConstraint.activate([
         
-            image.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 20),
-            image.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -45),
-            image.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +45),
+            image.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 20.0),
+            image.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -45.0),
+            image.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 45.0),
             
            
             
-            labelUnderField2.topAnchor.constraint(equalTo: image.bottomAnchor, constant: +60),
-            labelUnderField2.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20),
-            labelUnderField2.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +20),
+            labelUnderField2.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 60.0),
+            labelUnderField2.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20.0),
+            labelUnderField2.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 20.0),
 
             
-            textField.topAnchor.constraint(equalTo: labelUnderField2.bottomAnchor, constant: 10),
-            textField.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20),
+            textField.topAnchor.constraint(equalTo: labelUnderField2.bottomAnchor, constant: 10.0),
+            textField.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20.0),
             textField.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +20),
             
            
             
-            label.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: +20),
-            label.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20),
-            label.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +20),
+            label.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 20.0),
+            label.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20.0),
+            label.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 20.0),
             
-            labelUnderField.topAnchor.constraint(equalTo: label.bottomAnchor, constant: +5),
-            labelUnderField.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20),
-            labelUnderField.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +20),
+            labelUnderField.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 5.0),
+            labelUnderField.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -20.0),
+            labelUnderField.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 20.0),
              
-            getAnswer.topAnchor.constraint(equalTo: labelUnderField.bottomAnchor, constant: 60),
-            getAnswer.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -80),
-            getAnswer.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +80),
+            getAnswer.topAnchor.constraint(equalTo: labelUnderField.bottomAnchor, constant: 60.0),
+            getAnswer.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -80.0),
+            getAnswer.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: +80.0)
             
             
         ])

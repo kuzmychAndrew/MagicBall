@@ -8,7 +8,7 @@
 import UIKit
 
 
-class SettingViewController: UIViewController{
+final class SettingViewController: UIViewController{
     
     var label: UILabel!
     var answerField: UITextField!
@@ -19,7 +19,7 @@ class SettingViewController: UIViewController{
     private var svm = SettingViewModel()
     
 // Метод для виклику після натискання кнопки, отримання даних з TextField та передачі даниз в ViewModel
-    @objc final func save(sender: UIButton){
+    @objc func save(sender: UIButton){
         if answerField.text == ""{
             let ac = UIAlertController(title: "Error", message: "The field cannot be empty", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "Ok", style: .cancel))

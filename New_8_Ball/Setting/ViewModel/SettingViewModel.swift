@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class SettingViewModel{
+final class SettingViewModel{
     //Ініціалізуємо зовнішні сервіси
     private var realmService = RealmService()
     var hardAnswer = Dynamic("")

@@ -7,12 +7,12 @@
 
 import Foundation
 import RealmSwift
-class RealmService{
+final class RealmService{
     let realm: Realm = try! Realm()
 
     var answers = try! Realm().objects(HardAnswer.self)
     //Метод для отримання hardAnswer з бази даних
-    final func getingRealmAnswer(compeltion: @escaping (String) ->()){
+    func getingRealmAnswer(compeltion: @escaping (String) ->()){
         
         let randAnswer = self.answers.randomElement()
         guard let answer = randAnswer?.answer else{return}
@@ -21,7 +21,7 @@ class RealmService{
         
     }
     // Метод для запису hardAnswer в базу даних
-    final func writingRealmAnswer(answer: String){
+    func writingRealmAnswer(answer: String){
             let currentAnswer = answer
             let newAnswer = HardAnswer(answer: currentAnswer)
 
