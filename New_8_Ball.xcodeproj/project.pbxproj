@@ -29,6 +29,9 @@
 		CE06DECA27A1627200C9EDB0 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06DEC927A1627200C9EDB0 /* SettingViewModel.swift */; };
 		CE06DECC27A1627E00C9EDB0 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06DECB27A1627E00C9EDB0 /* RealmModel.swift */; };
 		CE06DECE27A293F200C9EDB0 /* 8ball.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE06DECD27A293F200C9EDB0 /* 8ball.jpeg */; };
+		CE3E14AC27C392BB008AB152 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E14AB27C392BB008AB152 /* MainView.swift */; };
+		CE3E14AE27C39D56008AB152 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E14AD27C39D56008AB152 /* SettingView.swift */; };
+		CE5C1DD727C1374F00F380C4 /* ViewBilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5C1DD627C1374F00F380C4 /* ViewBilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,9 @@
 		CE06DEC927A1627200C9EDB0 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		CE06DECB27A1627E00C9EDB0 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		CE06DECD27A293F200C9EDB0 /* 8ball.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8ball.jpeg; sourceTree = "<group>"; };
+		CE3E14AB27C392BB008AB152 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CE3E14AD27C39D56008AB152 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		CE5C1DD627C1374F00F380C4 /* ViewBilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBilder.swift; sourceTree = "<group>"; };
 		D283FFE0C8E4F8D8928501D4 /* Pods-New_8_Ball-New_8_BallUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-New_8_Ball-New_8_BallUITests.debug.xcconfig"; path = "Target Support Files/Pods-New_8_Ball-New_8_BallUITests/Pods-New_8_Ball-New_8_BallUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +165,7 @@
 		CE06DE8027A1612D00C9EDB0 /* New_8_Ball */ = {
 			isa = PBXGroup;
 			children = (
+				CE5C1DD527C1374000F380C4 /* Builder */,
 				CE06DEBA27A161E800C9EDB0 /* Services */,
 				CE06DEB927A161DF00C9EDB0 /* Binding */,
 				CE06DEB527A1618E00C9EDB0 /* Main */,
@@ -221,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				CE06DEC727A1626200C9EDB0 /* SettingViewController.swift */,
+				CE3E14AD27C39D56008AB152 /* SettingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				CE06DE8527A1612D00C9EDB0 /* ViewController.swift */,
+				CE3E14AB27C392BB008AB152 /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -275,6 +284,14 @@
 				CE06DEBD27A1621300C9EDB0 /* RealmServices.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CE5C1DD527C1374000F380C4 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				CE5C1DD627C1374F00F380C4 /* ViewBilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,9 +535,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE06DE8627A1612D00C9EDB0 /* ViewController.swift in Sources */,
+				CE3E14AC27C392BB008AB152 /* MainView.swift in Sources */,
 				CE06DECC27A1627E00C9EDB0 /* RealmModel.swift in Sources */,
+				CE5C1DD727C1374F00F380C4 /* ViewBilder.swift in Sources */,
 				CE06DEBE27A1621300C9EDB0 /* RealmServices.swift in Sources */,
 				CE06DE8227A1612D00C9EDB0 /* AppDelegate.swift in Sources */,
+				CE3E14AE27C39D56008AB152 /* SettingView.swift in Sources */,
 				CE06DEC627A1625100C9EDB0 /* Answer.swift in Sources */,
 				CE06DEC427A1624700C9EDB0 /* Answers.swift in Sources */,
 				CE06DEC827A1626200C9EDB0 /* SettingViewController.swift in Sources */,

@@ -7,7 +7,12 @@
 
 import Foundation
 import Alamofire
-final class JSONService{
+protocol jsonServiceProtocol{
+    func getingJSONAnswer(completion : @escaping (Answers) ->())
+}
+
+
+final class JSONService: jsonServiceProtocol{
     // Метод для отримання даних з веб ресурсу
     func getingJSONAnswer(completion : @escaping (Answers) ->()){
         let url = URL(string: "https://8ball.delegator.com/magic/JSON/why")!

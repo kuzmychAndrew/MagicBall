@@ -7,7 +7,12 @@
 
 import Foundation
 import RealmSwift
-final class RealmService{
+
+protocol realmServiceProtocol{
+    func getingRealmAnswer(compeltion: @escaping (String) ->())
+    func writingRealmAnswer(answer: String)
+}
+final class RealmService: realmServiceProtocol{
     let realm: Realm = try! Realm()
 
     var answers = try! Realm().objects(HardAnswer.self)

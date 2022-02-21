@@ -6,12 +6,24 @@
 //
 
 import Foundation
+
+
+
+
+ 
 final class MainViewModel{
+    
+    
     
     //Ініціалізуємо зовнішні сервіси
 
-    private let jsonService = JSONService()
-    private let realmService = RealmService()
+    private let jsonService: jsonServiceProtocol
+    private let realmService: realmServiceProtocol
+    init (jsonService: jsonServiceProtocol, realmService: realmServiceProtocol){
+        self.jsonService = jsonService
+        self.realmService = realmService
+
+    }
     
    
     var jsonAnswer = Dynamic("")
@@ -20,7 +32,7 @@ final class MainViewModel{
     
     
     // Отримуємо необхідні дані з зовнішніх сервісів
-    func fetchHardAnwer(){
+    func fetchHardAnswer(){
         print("fetchHardAnwer")
         self.realmService.getingRealmAnswer {(answer) in
             self.realmAnswer.value = answer
@@ -29,7 +41,7 @@ final class MainViewModel{
     }
     
     
-    func fetchAnswer(){
+    func fetchRealmAnswer(){
         self.jsonService.getingJSONAnswer {(empData) in
             self.empData = empData
             self.jsonAnswer.value = empData.magic.answer
