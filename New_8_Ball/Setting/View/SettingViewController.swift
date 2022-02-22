@@ -9,42 +9,27 @@ import UIKit
 
 
 final class SettingViewController: UIViewController{
-    
    
-    
     // Ініціалізуємо зовніщні сервіси
-    
-    private var svm = ViewModelBilder.createSettingModule()
-    var settingView: SettingView{return self.view as! SettingView}
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+    private var settingViewController = ViewModelBilder.createSettingModule()
+    private var settingView: SettingView{return view as! SettingView}
+        
     override func loadView() {
-        self.view = SettingView(frame: UIScreen.main.bounds)
-            settingView.saveB.addTarget(self, action: #selector(save), for: .touchUpInside)
-
+        view = SettingView(frame: UIScreen.main.bounds)
+        settingView.buttonToSave.addTarget(self, action: #selector(save), for: .touchUpInside)
     }
-    
     
 // Метод для виклику після натискання кнопки, отримання даних з TextField та передачі даниз в ViewModel
     @objc func save(sender: UIButton){
         if settingView.answerField.text == ""{
-            let ac = UIAlertController(title: "Error", message: "The field cannot be empty", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
-            self.present(ac, animated: true, completion: nil)
-        
+            let errorAlert = UIAlertController(title: "Error", message: "The field cannot be empty", preferredStyle: .alert)
+            errorAlert.addAction(UIAlertAction(title: "Ok", style: .cancel))
+            self.present(errorAlert, animated: true, completion: nil)
         }else{
             guard let currentAnswer = settingView.answerField.text else{return}
-            svm.writeAnswer(answer: currentAnswer)
-                settingView.answerField.text = ""
+            settingViewController.writeAnswer(answer: currentAnswer)
+            settingView.answerField.text = ""
         }
-
-       
     }
-    
-   
-    
 }
 
