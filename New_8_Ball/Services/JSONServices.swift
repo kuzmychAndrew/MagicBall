@@ -7,31 +7,27 @@
 
 import Foundation
 import Alamofire
-protocol jsonServiceProtocol{
-    func getingJSONAnswer(completion : @escaping (Answers) ->())
+protocol jsonServiceProtocol {
+    func getingJSONAnswer(completion : @escaping (Answers) -> Void)
 }
 
-
-final class JSONService: jsonServiceProtocol{
+final class JSONService: jsonServiceProtocol {
     // Метод для отримання даних з веб ресурсу
-    func getingJSONAnswer(completion : @escaping (Answers) ->()){
+    func getingJSONAnswer(completion : @escaping (Answers) -> Void) {
         let url = URL(string: "https://8ball.delegator.com/magic/JSON/why")!
         let queue = DispatchQueue.global(qos: .utility)
         queue.async {
-            
-        
-        
+
             AF.request(url, method: .get, encoding: URLEncoding.default).responseData {responseData in
                 print(responseData)
-                switch responseData.result{
+                switch responseData.result {
                 case .success(let data):
                     let jsonDecoder = JSONDecoder()
-                    let empData = try! jsonDecoder.decode(Answers.self, from: data)
+                    let empData = (try? jsonDecoder.decode(Answers.self, from: data)) ?? Answers()
                     completion(empData)
                     dump(empData)
                     print(empData)
-//
-                
+                   
                 case .failure(let error):
                 print(error)
 //
@@ -42,7 +38,7 @@ final class JSONService: jsonServiceProtocol{
     }
 }
 
-//URLSession.shared.dataTask(with: url){ (data, urlResponse, error) in
+// URLSession.shared.dataTask(with: url){ (data, urlResponse, error) in
 //            DispatchQueue.main.async {
 //
 //
@@ -61,12 +57,10 @@ final class JSONService: jsonServiceProtocol{
 //            }
 //        }.resume()
 
-
-//let json = JSON(value)
+// let json = JSON(value)
 //                for (i, j) in json["magic"]{
 //                    if i == "answer"{
 //                        let answer = j
 //                        completion("\(answer)")
 //                        print("\(answer)")
 //
-

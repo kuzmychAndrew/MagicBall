@@ -8,12 +8,11 @@
 import Foundation
 import RealmSwift
 
-
-final class HardAnswer: Object{
+final class HardAnswer: Object {
     @objc dynamic public var answer = ""
     @objc dynamic private var id = ObjectId.generate()
 
-    convenience init(answer:String) {
+    convenience init(answer: String) {
 
         self.init()
         self.answer = answer

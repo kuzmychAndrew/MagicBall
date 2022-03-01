@@ -8,7 +8,7 @@
 import XCTest
 @testable import New_8_Ball
 
-class New_8_BallTests: XCTestCase {
+class New8BallTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

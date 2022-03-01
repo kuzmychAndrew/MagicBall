@@ -5,17 +5,17 @@
 ////  Created by Андрій Кузьмич on 19.02.2022.
 ////
 //
-//import Foundation
+// import Foundation
 //
 //
-//protocol FetchAnswer{
+// protocol FetchAnswer{
 //    func fetchAnswer()
-//}
+// }
 //
 //
 //
 //
-//class FetchRealmAnswer: FetchAnswer {
+// class FetchRealmAnswer: FetchAnswer {
 //    
 //    private let realmService = RealmService()
 //    var realmAnswer = Dynamic("")
@@ -29,9 +29,9 @@
 //     
 //    
 //    
-//}
+// }
 //
-//class FetchJSONAnwer: FetchAnswer{
+// class FetchJSONAnwer: FetchAnswer{
 //    private let jsonService = JSONService()
 //    var jsonAnswer = Dynamic("")
 //    var empData: Answers!
@@ -45,4 +45,4 @@
 //    }
 //    
 //    
-//}
+// }

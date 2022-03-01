@@ -8,6 +8,7 @@ target 'New_8_Ball' do
   # Pods for New_8_Ball
 pod 'Alamofire', '~> 5.5'
 pod 'RealmSwift', '~>10'
+pod 'SwiftLint', '~>0.46.1'
   target 'New_8_BallTests' do
     inherit! :search_paths
     # Pods for testing

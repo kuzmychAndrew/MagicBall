@@ -302,6 +302,7 @@
 			buildConfigurationList = CE06DEA827A1612F00C9EDB0 /* Build configuration list for PBXNativeTarget "New_8_Ball" */;
 			buildPhases = (
 				DF6D77E8F42D6740183C7C16 /* [CP] Check Pods Manifest.lock */,
+				CE77F7DE27C5156F003F2B8F /* Run SwiftLint */,
 				CE06DE7A27A1612D00C9EDB0 /* Sources */,
 				CE06DE7B27A1612D00C9EDB0 /* Frameworks */,
 				CE06DE7C27A1612D00C9EDB0 /* Resources */,
@@ -482,6 +483,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-New_8_Ball-New_8_BallUITests/Pods-New_8_Ball-New_8_BallUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CE77F7DE27C5156F003F2B8F /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint autocorrect && ${PODS_ROOT}/SwiftLint/swiftlint\n\n";
 		};
 		D782CD148A683EA95166E960 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

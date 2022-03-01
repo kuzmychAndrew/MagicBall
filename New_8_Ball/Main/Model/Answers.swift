@@ -6,7 +6,6 @@
 //
 
 import Foundation
-struct Answers:Codable{
+struct Answers: Codable {
     var magic: Answer
 }
-
