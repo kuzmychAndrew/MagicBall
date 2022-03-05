@@ -20,6 +20,6 @@ final class SettingViewModel {
         // Отримання даних з View та передача даних в зовнішній ресурс
 
     func writeAnswer(answer: String) {
-        realmService.writingRealmAnswer(answer: answer)
+        self.realmService.writingRealmAnswer(answer: answer)
     }
 }

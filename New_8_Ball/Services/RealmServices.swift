@@ -9,12 +9,14 @@ import Foundation
 import RealmSwift
 
 protocol realmServiceProtocol {
-    static func getingRealmAnswer(compeltion: @escaping (String) -> Void)
-    static func writingRealmAnswer(answer: String)
+    func getingRealmAnswer(compeltion: @escaping (String) -> Void)
+    func writingRealmAnswer(answer: String)
 }
 final class RealmService: realmServiceProtocol {
+    
+//    static var realm: Realm = try! Realm()
 
-    static var realm: Realm {
+    var realm: Realm {
         get {
             do {
                 let realm = try Realm()
@@ -27,7 +29,7 @@ final class RealmService: realmServiceProtocol {
         }
     
     // Метод для отримання hardAnswer з бази даних
-    static func getingRealmAnswer(compeltion: @escaping (String) -> Void) {
+    func getingRealmAnswer(compeltion: @escaping (String) -> Void) {
         
         do {
             let answers = try Realm().objects(HardAnswer.self)
@@ -41,7 +43,7 @@ final class RealmService: realmServiceProtocol {
 
     }
     // Метод для запису hardAnswer в базу даних
-    static func writingRealmAnswer(answer: String) {
+    func writingRealmAnswer(answer: String) {
         let currentAnswer = answer
         let newAnswer = HardAnswer(answer: currentAnswer)
         

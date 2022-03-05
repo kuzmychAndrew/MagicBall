@@ -23,7 +23,7 @@ final class JSONService: jsonServiceProtocol {
                 switch responseData.result {
                 case .success(let data):
                     let jsonDecoder = JSONDecoder()
-                    let empData = (try? jsonDecoder.decode(Answers.self, from: data)) ?? Answers()
+                    let empData = try? (jsonDecoder.decode(Answers.self, from: data)) ?? Answers()
                     completion(empData)
                     dump(empData)
                     print(empData)
