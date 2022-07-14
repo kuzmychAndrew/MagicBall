@@ -11,7 +11,8 @@
         <!--Main-->
         <scene sceneID="laK-f1-aKI">
             <objects>
-                <viewController id="D3k-jh-NKV" customClass="ViewController" customModule="__ball" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oNZ-dq-2Qm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="D3k-jh-NKV" customClass="MainViewController" customModule="New_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h3M-y4-Rdj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,14 +26,14 @@
                         <barButtonItem key="rightBarButtonItem" title="Setting" id="Ae8-m2-tTH"/>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oNZ-dq-2Qm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4176.811594202899" y="-127.23214285714285"/>
         </scene>
         <!--Setting-->
         <scene sceneID="nwh-le-zEW">
             <objects>
-                <viewController id="5Ae-GH-RM5" customClass="SettingViewController" customModule="__ball" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="heR-uj-HAV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="5Ae-GH-RM5" customClass="SettingViewController" customModule="New_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="896-Et-zCN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,14 +45,14 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="Pc1-2f-wYx"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="heR-uj-HAV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4205.7971014492759" y="576.5625"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--View Controller-->
         <scene sceneID="8qr-I5-QHm">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ifG-lR-U0v" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T36-8h-i8m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ifG-lR-U0v" customClass="ViewController" customModule="New_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1cr-gg-Zhe">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -65,7 +66,6 @@
                         <segue destination="5Ae-GH-RM5" kind="relationship" relationship="viewControllers" id="stk-q5-jty"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T36-8h-i8m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3266.666666666667" y="224.33035714285714"/>
         </scene>

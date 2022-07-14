@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 
-class HardAnswer: Object{
+final class HardAnswer: Object{
     @objc dynamic public var answer = ""
     @objc dynamic private var id = ObjectId.generate()
 

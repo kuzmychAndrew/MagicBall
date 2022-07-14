@@ -6,15 +6,20 @@
 //
 
 import Foundation
-class SettingViewModel{
+
+final class SettingViewModel{
+    
     //Ініціалізуємо зовнішні сервіси
-    private var realmService = RealmService()
-    var hardAnswer = Dynamic("")
+    private var realmService: RealmServiceProtocol
+    public var hardAnswer = Dynamic("")
      
+    init (realmService: RealmServiceProtocol){
+        self.realmService = realmService
+        
+    }
     
-        //Отримання даних з View та передача даних в зовнішній ресурс
-    
-    func writeHardAnswer(answer: String){
-        realmService.writeHardAnswer(answer: answer)
+    //Отримання даних з View та передача даних в зовнішній ресурс
+    func writeAnswer(answer: String){
+        realmService.writingRealmAnswer(answer: answer)
     }
 }
